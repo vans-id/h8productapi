@@ -2,6 +2,6 @@ FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-COPY out/artifacts/ProductAPI_jar/ProductAPI.jar app.jar
+COPY build/libs/productApi-0.0.1-SNAPSHOT.jar app.jar
 
 CMD ["java", "-Dserver.port=8080", "-jar", "app.jar"]
